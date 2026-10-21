@@ -49,7 +49,10 @@ const Layout = ({ children }) => {
           type="image/png"
           sizes="16x16"
         />
-        <link rel="shortcut icon" href={assetUrl("/favicon.ico")} />
+        <link
+          rel="shortcut icon"
+          href={assetUrl("/favicon.ico?v=r-logo-1")}
+        />
         <link
           rel="apple-touch-icon"
           href={assetUrl("/apple-touch-icon.png")}
