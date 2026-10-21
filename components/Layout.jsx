@@ -36,7 +36,25 @@ const Layout = ({ children }) => {
         />
         <meta name="author" content="Raj Vardhan Singh" />
         <meta name="theme-color" content="#f13024" />
-        <link rel="icon" href={assetUrl("/favicon.ico")} />
+        <link rel="icon" href={assetUrl("/favicon.svg")} type="image/svg+xml" />
+        <link
+          rel="icon"
+          href={assetUrl("/favicon-32x32.png")}
+          type="image/png"
+          sizes="32x32"
+        />
+        <link
+          rel="icon"
+          href={assetUrl("/favicon-16x16.png")}
+          type="image/png"
+          sizes="16x16"
+        />
+        <link rel="shortcut icon" href={assetUrl("/favicon.ico")} />
+        <link
+          rel="apple-touch-icon"
+          href={assetUrl("/apple-touch-icon.png")}
+          sizes="180x180"
+        />
       </Head>
 
       <TopLeftImg />

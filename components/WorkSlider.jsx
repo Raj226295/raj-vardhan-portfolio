@@ -32,9 +32,21 @@ const projects = [
   },
 ];
 
+const figmaLinks = [
+  "https://www.figma.com/design/fLT8K1Pnz4rWlfHYODtqNg/Meena-Makhana?node-id=0-1&t=XBONcF6qGPKKKvdO-1",
+  "https://www.figma.com/design/R6ORgfaxYsxazWNjWXT2Tc/6-SEM-E-learning?t=XBONcF6qGPKKKvdO-1",
+  "https://www.figma.com/design/0F6JlKwfifPjKwnjqJJZyC/Untitled?node-id=0-1&t=XBONcF6qGPKKKvdO-1",
+  "https://www.figma.com/design/gFZriVvWvtUhTWZaiRIn9R/Gym-page?t=XBONcF6qGPKKKvdO-1",
+];
+
 const workSlides = [
   projects,
-  [projects[3], projects[0], projects[1], projects[2]],
+  [projects[3], projects[0], projects[1], projects[2]].map(
+    (project, index) => ({
+      ...project,
+      link: figmaLinks[index],
+    })
+  ),
 ];
 
 const WorkSlider = () => {
@@ -55,7 +67,11 @@ const WorkSlider = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`View ${project.title} live project`}
-                className="group relative block min-w-0 overflow-hidden rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                className={`group relative block min-w-0 overflow-hidden rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent${
+                  slideIndex === workSlides.length - 1
+                    ? " cursor-pointer"
+                    : ""
+                }`}
                 key={project.title}
               >
                   <Image

@@ -14,7 +14,7 @@ const Testimonials = () => {
           exit="hidden"
           className="h2 mb-8 xl:mb-0"
         >
-          Project <span className="text-accent">Highlights.</span>
+          Client <span className="text-accent">Testimonials.</span>
         </motion.h2>
 
         <motion.p
@@ -24,11 +24,11 @@ const Testimonials = () => {
           exit="hidden"
           className="mx-auto mb-2 max-w-[620px] px-4 text-white/70"
         >
-          A closer look at the websites I&apos;ve worked on, focused on modern
-          design, responsive layouts, and practical user experiences.
+          Discover what clients say about my work, creativity, and commitment
+          to delivering exceptional digital experiences.
         </motion.p>
 
-        {/* project slider */}
+        {/* testimonial slider */}
         <motion.div
           variants={fadeIn("up", 0.4)}
           initial="hidden"
